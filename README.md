@@ -12,8 +12,8 @@ The system is trained on a synthesized dataset and can be deployed to listen for
 - [Architectural Design](#architectural-design)
 - [Data Synthesis and Preprocessing](#data-synthesis-and-preprocessing)
 - [Model Architecture](#-model-architecture)
-- [Getting Started](#-getting-started)
-- [Usage](#-usage)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
 - [Skills Demonstrated](#-skills-demonstrated)
 - [📁 File Structure](#-file-structure)
 - [Future Work](#-future-work)
@@ -164,7 +164,7 @@ Use the functions within model.ipynb to test the model on new audio. The detect_
 
 ---
 
-## Skills Demonstrated
+## 🛠️ Skills Demonstrated
 This project is a comprehensive showcase of expertise in several critical areas of modern machine learning and software engineering.
 
 - **Audio Signal Processing:** In-depth understanding of converting raw audio into spectrograms, a crucial step for feature extraction in speech applications.
@@ -206,7 +206,7 @@ keyword-spotting-engine.
 ```
 ---
 
-## Future Work
+## 🔮 Future Work
 - **Performance Optimization:** Explore quantization techniques or model pruning to deploy the model on resource-constrained devices (e.g., Raspberry Pi).
 
 - **Larger Dataset:** Expand the data synthesis pipeline to include a wider variety of voices, languages, and background noises for a more generalized model.
