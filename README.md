@@ -16,7 +16,7 @@ The system is trained on a synthesized dataset and can be deployed to listen for
 - [Usage](#-usage)
 - [Skills Demonstrated](#-skills-demonstrated)
 - [📁 File Structure](#-file-structure)
-- [🔮 Future Work](#-future-work)
+- [Future Work](#-future-work)
 
 ---
 
@@ -163,7 +163,7 @@ Use the functions within model.ipynb to test the model on new audio. The detect_
 
 ---
 
-## 🛠️ Skills Demonstrated
+## Skills Demonstrated
 This project is a comprehensive showcase of expertise in several critical areas of modern machine learning and software engineering.
 
 - **Audio Signal Processing:** In-depth understanding of converting raw audio into spectrograms, a crucial step for feature extraction in speech applications.
