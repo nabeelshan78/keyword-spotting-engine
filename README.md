@@ -17,6 +17,7 @@ The system is trained on a synthesized dataset and can be deployed to listen for
 - [Skills Demonstrated](#-skills-demonstrated)
 - [📁 File Structure](#-file-structure)
 - [Future Work](#-future-work)
+- [Author](#-👨‍💻-author)
 
 ---
 
@@ -180,6 +181,7 @@ This project is a comprehensive showcase of expertise in several critical areas 
 
 
 ## 📁 File Structure
+```
 keyword-spotting-engine.
 ├── chime.wav                       # The audio chime file
 ├── model/
