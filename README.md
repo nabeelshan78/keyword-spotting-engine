@@ -9,15 +9,15 @@ The system is trained on a synthesized dataset and can be deployed to listen for
 ## 📚 Table of Contents
 
 - [Project Overview](#-project-overview)
-- [Architectural Design](#-architectural-design)
-- [Data Synthesis and Preprocessing](#-data-synthesis-and-preprocessing)
+- [Architectural Design](#architectural-design)
+- [Data Synthesis and Preprocessing](#data-synthesis-and-preprocessing)
 - [Model Architecture](#-model-architecture)
 - [Getting Started](#-getting-started)
 - [Usage](#-usage)
 - [Skills Demonstrated](#-skills-demonstrated)
 - [📁 File Structure](#-file-structure)
 - [Future Work](#-future-work)
-- [Author](#-👨‍💻-author)
+- [Author](#-author)
 
 ---
 
