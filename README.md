@@ -41,7 +41,27 @@ The system follows a sequential pipeline from data preparation to prediction. Th
 
 **Workflow Diagram:**
 
-> *Note: You can create a simple architecture diagram using tools like Excalidraw, Figma, or draw.io and replace the placeholder link. A simple diagram showing the flow from "Raw Audio" -> "Spectrogram" -> "DL Model" -> "Prediction" -> "Chime" would be very effective.*
+```mermaid
+flowchart TD
+    subgraph Model["Trigger Word Detection Model"]
+        A["Input Audio Spectrogram<br/>(Tx, n_freq)"] --> B["Conv1D Layer<br/>filters=196, kernel=15, stride=4"]
+        B --> C["Batch Normalization + ReLU Activation"]
+        C --> D["Dropout (rate=0.8)"]
+
+        D --> E["GRU Layer 1<br/>units=128, return_sequences=True"]
+        E --> F["Dropout (rate=0.8)"]
+        F --> G["Batch Normalization"]
+
+        G --> H["GRU Layer 2<br/>units=128, return_sequences=True"]
+        H --> I["Dropout (rate=0.8)"]
+        I --> J["Batch Normalization"]
+        J --> K["Dropout (rate=0.8)"]
+
+        K --> L["TimeDistributed Dense(1)<br/>activation='sigmoid'"]
+        L --> M["Output Predictions<br/>(Ty, 1)"]
+    end
+```
+
 
 ### 1. Data Synthesis:
 - Random "activate" and "negative" (non-trigger) word clips are overlaid onto 10-second background noise recordings.
