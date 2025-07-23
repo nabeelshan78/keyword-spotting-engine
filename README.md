@@ -8,16 +8,15 @@ The system is trained on a synthesized dataset and can be deployed to listen for
 
 ## 📚 Table of Contents
 
-- [📝 Project Overview](#-project-overview)
-- [🏗️ Architectural Design](#️-architectural-design)
-- [📊 Data Synthesis and Preprocessing](#-data-synthesis-and-preprocessing)
-- [🧠 Model Architecture](#-model-architecture)
-- [▶️ Getting Started](#️-getting-started)
-- [🚀 Usage](#-usage)
-- [🛠️ Skills Demonstrated](#️-skills-demonstrated)
+- [Project Overview](#-project-overview)
+- [Architectural Design](#-architectural-design)
+- [Data Synthesis and Preprocessing](#-data-synthesis-and-preprocessing)
+- [Model Architecture](#-model-architecture)
+- [Getting Started](#-getting-started)
+- [Usage](#-usage)
+- [Skills Demonstrated](#-skills-demonstrated)
 - [📁 File Structure](#-file-structure)
 - [🔮 Future Work](#-future-work)
-- [📜 Acknowledgments & License](#-acknowledgments--license)
 
 ---
 
@@ -36,7 +35,7 @@ This project is a strong demonstration of the principles behind modern speech us
 
 ---
 
-## 🏗️ Architectural Design
+## Architectural Design
 
 The system follows a sequential pipeline from data preparation to prediction. The architecture is modular and scalable, allowing for future improvements to the model or dataset.
 
@@ -62,7 +61,7 @@ The system follows a sequential pipeline from data preparation to prediction. Th
 
 ---
 
-## 📊 Data Synthesis and Preprocessing
+## Data Synthesis and Preprocessing
 
 A major component of this project is the construction of a robust training dataset from a limited set of raw audio clips.
 
@@ -129,7 +128,7 @@ def modelf(input_shape):
 
 ---
 
- ## Getting Started
+ ## Usage
 Follow these steps to set up the project locally.
 
 ```bash
