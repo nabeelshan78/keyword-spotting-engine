@@ -1,5 +1,5 @@
 streamlit
-numpy==1.26.6  # Explicitly pin to the very last NumPy 1.x version
+numpy==1.26.4
 matplotlib
 pydub
 scipy
