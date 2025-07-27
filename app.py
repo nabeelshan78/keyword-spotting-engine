@@ -12,6 +12,17 @@ from tensorflow.keras import backend as K
 import tempfile # For handling temporary files safely
 import io # For in-memory audio handling
 
+
+# --- Streamlit App Layout ---
+
+st.set_page_config(
+    page_title="Trigger Word Detector",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
+
+
 # --- Configuration and Constants ---
 # Define Tx and Ty based on your model's input/output expectations
 Tx = 5511 # Number of time steps in the input spectrogram
@@ -216,14 +227,6 @@ def convert_m4a_to_wav(m4a_filepath, wav_filepath):
     except Exception as e:
         st.error(f"Error converting M4A to WAV: {e}")
         return None
-
-# --- Streamlit App Layout ---
-
-st.set_page_config(
-    page_title="Trigger Word Detector",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
 
 st.title("🗣️ Trigger Word Detector")
 st.markdown("---")
