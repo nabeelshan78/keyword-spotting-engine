@@ -1,6 +1,6 @@
 streamlit
-numpy
 matplotlib
 pydub
 scipy
-tensorflow
+tensorflow==2.10.0
+numpy==1.23.5
