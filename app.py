@@ -413,7 +413,7 @@ st.header("Model Architecture")
 
 # Display the architecture diagram if it exists
 if os.path.exists(ARCHITECTURE_DIAGRAM_PATH):
-    st.image(ARCHITECTURE_DIAGRAM_PATH, caption='Model Architecture Diagram', use_container_width=True)
+    st.image(ARCHITECTURE_DIAGRAM_PATH, caption='Model Architecture Diagram')
 else:
     st.warning(f"Architecture diagram '{ARCHITECTURE_DIAGRAM_PATH}' not found. Please place it in the same directory as 'app.py'.")
 
