@@ -1,14 +1,22 @@
 # 🔊 Realtime Wake Word Detection
 
-This repository contains a complete end-to-end implementation of a wake word detection system. The project uses deep learning to identify a specific trigger word, "activate," in real-time audio streams. This is a foundational technology for voice-activated assistants and smart devices.
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://keyword-spotting-engine-dlydrlpjcyssh7yyjzemqd.streamlit.app/)
 
-The system is trained on a synthesized dataset and can be deployed to listen for the trigger word, responding with an auditory chime. This project demonstrates key skills in speech recognition, deep learning, and audio signal processing.
+This repository contains an implementation of a wake word detection system. This Streamlit web application allows you to upload your own audio files (WAV) or select from existing examples to detect a specific trigger word, "activate."
+
+The system leverages deep learning techniques for audio signal processing and pattern recognition. Upon processing, the app displays:
+* The **spectrogram** of the input audio, visualizing its frequency content over time.
+* A **probability graph** showing the model's confidence in detecting the trigger word across the audio duration.
+* An **output audio file** where an auditory chime is overlaid at the detected instances of the trigger word.
+
+This project demonstrates key skills in speech recognition, deep learning, and building interactive web applications for AI models.
 
 ---
 
 ## 📚 Table of Contents
 
 - [Project Overview](#-project-overview)
+- [How it Works](#how-it-works)
 - [Architectural Design](#architectural-design)
 - [Data Synthesis and Preprocessing](#data-synthesis-and-preprocessing)
 - [Model Architecture](#-model-architecture)
@@ -32,6 +40,15 @@ The objective of this project is to build a robust keyword spotting system capab
 - **Practical Application:** The system chimes in response to the detected trigger word, mimicking a real-world application.
 
 This project is a strong demonstration of the principles behind modern speech user interfaces and their underlying machine learning models.
+
+---
+
+
+## How it Works
+1.  **Audio Input**: The app takes a `.wav`.
+2.  **Spectrogram Generation**: The audio is converted into a spectrogram, which is a visual representation of the frequencies present in the audio over time. This is what the neural network "sees".
+3.  **Neural Network Prediction**: A 1D Convolutional Neural Network (CNN) followed by Gated Recurrent Units (GRUs) processes the spectrogram. It outputs a probability score for each short segment of the audio, indicating how likely a trigger word is present.
+4.  **Chime Overlay**: If the probability consistently exceeds a certain threshold (configurable via a slider), a chime sound is overlaid onto the original audio at that specific time, indicating a detected trigger word.
 
 ---
 
