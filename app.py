@@ -228,14 +228,14 @@ def convert_m4a_to_wav(m4a_filepath, wav_filepath):
         st.error(f"Error converting M4A to WAV: {e}")
         return None
 
-st.title("🗣️ Trigger Word Detector")
+st.title("🔊 Realtime Wake Word Detector")
 st.markdown("---")
 
 # --- Sidebar (now only for About) ---
 st.sidebar.header("About This App")
 st.sidebar.markdown(
     """
-    This application demonstrates a trigger word or wake word detection system. 
+    This application demonstrates a wake word detection system. 
     It processes an audio input, identifies the presence of a predefined 
     trigger word (e.g., "activate"), and then overlays a "chime" sound 
     at the detected instances.
@@ -256,7 +256,7 @@ uploaded_file = None
 selected_audio_path = None # This will always point to a WAV file
 
 if audio_option == "Upload new audio":
-    uploaded_file = st.file_uploader("Upload an audio file (.wav or .m4a)", type=["wav", "m4a"])
+    uploaded_file = st.file_uploader("Upload an audio file (.wav)", type=["wav"])
     if uploaded_file is not None:
         file_extension = uploaded_file.name.split('.')[-1].lower()
         
@@ -286,7 +286,7 @@ if audio_option == "Upload new audio":
             selected_audio_path = original_uploaded_path # Already a WAV file
             st.success("WAV file uploaded successfully!")
         else:
-            st.error("Unsupported file type. Please upload a .wav or .m4a file.")
+            st.error("Unsupported file type. Please upload a .wav file.")
             # Clean up unsupported file
             os.unlink(original_uploaded_path)
             selected_audio_path = None
@@ -391,8 +391,7 @@ st.markdown("---")
 st.header("How It Works")
 st.markdown(
     """
-    1.  **Audio Input**: The app takes a `.wav` or `.m4a` audio file as input. 
-        If `.m4a`, it's first converted to `.wav` using FFmpeg.
+    1.  **Audio Input**: The app takes a `.wav` audio file as input. 
     2.  **Spectrogram Generation**: The audio is converted into a spectrogram, 
         which is a visual representation of the frequencies present in the audio over time. 
         This is what the neural network "sees".
